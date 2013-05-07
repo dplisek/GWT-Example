@@ -18,5 +18,11 @@ public interface GMZadostControllerWrapper extends RemoteService {
 
 	List<GMZadost> filter(String jednaciCislo, String jednaciCisloZadatele,
 			Date datumDoruceniOd, Date datumDoruceniDo) throws ForbiddenException, BadRequestException;
+
+	boolean update(String secret, GMZadost entity) throws ForbiddenException,
+			BadRequestException;
+
+	boolean create(String secret, GMZadost entity) throws ForbiddenException,
+			BadRequestException;
 	
 }

@@ -31,4 +31,16 @@ public class GMZadostControllerWrapperImpl extends
 				dateFormat.format(datumDoruceniDo));
 	}
 	
+	@Override
+	public boolean create(String secret, GMZadost entity) throws ForbiddenException, BadRequestException {
+		controller.create(secret, entity);
+		return true;
+	}
+	
+	@Override
+	public boolean update(String secret, GMZadost entity) throws ForbiddenException, BadRequestException {
+		controller.update(secret, entity);
+		return true;
+	}
+	
 }

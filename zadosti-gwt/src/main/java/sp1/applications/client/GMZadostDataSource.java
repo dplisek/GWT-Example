@@ -12,8 +12,14 @@ import com.smartgwt.client.data.fields.DataSourceTextField;
  * @author Dominik Plisek
  */
 public class GMZadostDataSource extends DataSource {
+	
+	private static final GMZadostDataSource INSTANCE = new GMZadostDataSource();
 
-	public GMZadostDataSource() {
+	public static GMZadostDataSource getInstance() {
+		return INSTANCE;
+	}
+	
+	private GMZadostDataSource() {
 		super("gmZadost");
 		setClientOnly(true);
 		setFields(createZadostId(),

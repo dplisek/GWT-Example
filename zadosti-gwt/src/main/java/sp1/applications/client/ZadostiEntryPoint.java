@@ -7,18 +7,15 @@ import com.google.gwt.core.client.EntryPoint;
  */
 public class ZadostiEntryPoint implements EntryPoint {
 
-	private MainTabSet mainTabSet;
-
 	public void onModuleLoad() {
 		drawMainTabSet();
-		mainTabSet.addTab(new GMZadostTableTab());
+		MainTabSet.getInstance().addTab(new GMZadostTableTab());
 	}
 
 	private void drawMainTabSet() {
-		mainTabSet = new MainTabSet();
-		mainTabSet.setWidth100();
-		mainTabSet.setHeight100();
-		mainTabSet.draw();
+		MainTabSet.getInstance().setWidth100();
+		MainTabSet.getInstance().setHeight100();
+		MainTabSet.getInstance().draw();
 	}
 
 }

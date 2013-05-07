@@ -15,4 +15,8 @@ public interface GMZadostControllerWrapperAsync {
 	void filter(String jednaciCislo, String jednaciCisloZadatele,
 			Date datumDoruceniOd, Date datumDoruceniDo, AsyncCallback<List<GMZadost>> callback);
 
+	void update(String secret, GMZadost entity, AsyncCallback<Boolean> callback);
+
+	void create(String secret, GMZadost entity, AsyncCallback<Boolean> callback);
+
 }
