@@ -34,7 +34,17 @@
 		<servlet-name>gmZadost</servlet-name>
 		<url-pattern>/zadosti/wrappers/gmZadost</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>security</servlet-name>
+		<servlet-class>sp1.applications.server.wrappers.SecurityControllerWrapperImpl</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>security</servlet-name>
+		<url-pattern>/zadosti/wrappers/security</url-pattern>
+	</servlet-mapping>
+	
 	<!-- Default page to serve -->
 	<welcome-file-list>
 		<welcome-file>zadosti.html</welcome-file>

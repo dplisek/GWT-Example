@@ -12,7 +12,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  */
 public interface GMZadostControllerWrapperAsync {
 
-	void filter(String jednaciCislo, String jednaciCisloZadatele,
+	void filter(String secret, String jednaciCislo, String jednaciCisloZadatele,
 			Date datumDoruceniOd, Date datumDoruceniDo, AsyncCallback<List<GMZadost>> callback);
 
 	void update(String secret, GMZadost entity, AsyncCallback<Boolean> callback);

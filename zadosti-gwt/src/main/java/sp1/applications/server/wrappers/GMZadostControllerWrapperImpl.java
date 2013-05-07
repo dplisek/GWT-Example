@@ -23,11 +23,11 @@ public class GMZadostControllerWrapperImpl extends
 	private GMZadostController controller;
 
 	@Override
-	public List<GMZadost> filter(String jednaciCislo,
-			String jednaciCisloZadatele, Date datumDoruceniOd,
-			Date datumDoruceniDo) throws ForbiddenException, BadRequestException {
+	public List<GMZadost> filter(String secret,
+			String jednaciCislo, String jednaciCisloZadatele,
+			Date datumDoruceniOd, Date datumDoruceniDo) throws ForbiddenException, BadRequestException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		return controller.filter("FULL", jednaciCislo, jednaciCisloZadatele, dateFormat.format(datumDoruceniOd),
+		return controller.filter(secret, jednaciCislo, jednaciCisloZadatele, dateFormat.format(datumDoruceniOd),
 				dateFormat.format(datumDoruceniDo));
 	}
 	

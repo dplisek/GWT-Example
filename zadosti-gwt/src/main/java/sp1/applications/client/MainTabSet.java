@@ -12,9 +12,19 @@ public class MainTabSet extends TabSet {
 	public static MainTabSet getInstance() {
 		return INSTANCE;
 	}
+	
+	private String secret;
 
 	private MainTabSet() {
 		
+	}
+
+	public String getSecret() {
+		return secret;
+	}
+
+	public void setSecret(String secret) {
+		this.secret = secret;
 	}
 
 }

@@ -25,7 +25,8 @@ public class GMZadostTable extends ListGrid implements RecordDoubleClickHandler 
 	}
 
 	public void filter(String jednaciCislo, String jednaciCisloZadatele, Date datumDoruceniOd, Date datumDoruceniDo) {
-		controller.filter(jednaciCislo, jednaciCisloZadatele, datumDoruceniOd, datumDoruceniDo,
+		String secret = MainTabSet.getInstance().getSecret();
+		controller.filter(secret, jednaciCislo, jednaciCisloZadatele, datumDoruceniOd, datumDoruceniDo,
 				new RightsAwareAsyncCallback<List<GMZadost>>() {
 
 					@Override

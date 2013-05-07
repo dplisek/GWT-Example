@@ -30,7 +30,8 @@ public class GMZadostForm extends DynamicForm implements SubmitValuesHandler {
 
 	@Override
 	public void onSubmitValues(SubmitValuesEvent event) {
-		controller.update("FULL", createGMZadostFromMap(event.getValuesAsMap()), new RightsAwareAsyncCallback<Boolean>() {
+		String secret = MainTabSet.getInstance().getSecret();
+		controller.update(secret, createGMZadostFromMap(event.getValuesAsMap()), new RightsAwareAsyncCallback<Boolean>() {
 
 			@Override
 			public void onSuccess(Boolean result) {

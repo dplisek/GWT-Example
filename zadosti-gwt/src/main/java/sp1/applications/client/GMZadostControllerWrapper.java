@@ -16,8 +16,8 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("wrappers/gmZadost")
 public interface GMZadostControllerWrapper extends RemoteService {
 
-	List<GMZadost> filter(String jednaciCislo, String jednaciCisloZadatele,
-			Date datumDoruceniOd, Date datumDoruceniDo) throws ForbiddenException, BadRequestException;
+	List<GMZadost> filter(String secret, String jednaciCislo,
+			String jednaciCisloZadatele, Date datumDoruceniOd, Date datumDoruceniDo) throws ForbiddenException, BadRequestException;
 
 	boolean update(String secret, GMZadost entity) throws ForbiddenException,
 			BadRequestException;
