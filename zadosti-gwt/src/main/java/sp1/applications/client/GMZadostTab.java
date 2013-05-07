@@ -11,6 +11,7 @@ public class GMZadostTab extends Tab {
 
 	public GMZadostTab(GMZadost zadost) {
 		setTitle("" + zadost.getZadostId());
+		setCanClose(true);
 		setPane(new GMZadostForm(zadost));
 	}
 
