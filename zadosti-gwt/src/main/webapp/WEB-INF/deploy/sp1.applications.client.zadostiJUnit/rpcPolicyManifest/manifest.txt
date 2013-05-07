@@ -1,0 +1,2 @@
+# Module sp1.applications.client.zadostiJUnit
+# RPC service class, partial path of RPC policy file
